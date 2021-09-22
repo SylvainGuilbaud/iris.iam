@@ -1,0 +1,14 @@
+zn "%SYS"
+set IAMApp = "/api/iam"
+write "Enabling ",IAMApp," web application",!
+set IAMAppProperties("Enabled") = 1
+set sc = ##class(Security.Applications).Modify(IAMApp, .IAMAppProperties)
+write:sc IAMApp," successfully enabled",!
+write:'sc "ERROR WHILE ENABLING ",IAMApp,":",$system.Status.DisplayError(sc),!
+set IAMUser = "IAM"
+write "Enabling ",IAMUser," user",!
+set IAMUserProperties("Enabled") = 1
+set sc = ##class(Security.Users).Modify(IAMUser,.IAMUserProperties)
+write:sc IAMUser," user sucessfully enabled",!
+write:'sc "ERROR WHILE ENABLING ",IAMUser,":",$system.Status.DisplayError(sc),!
+halt
