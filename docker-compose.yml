@@ -55,7 +55,7 @@ services:
         KONG_CASSANDRA_CONTACT_POINTS: db
         # ISC_IRIS_URL: "IAM:${IRIS_PASSWORD}@10.0.0.11:52773/api/iam/license"
         ISC_IRIS_URL: "IAM:${IRIS_PASSWORD:?err}@iris:52773/api/iam/license"
-        ISC_CA_CERT: ${ISC_CA_CERT}
+        # ISC_CA_CERT: ${ISC_CA_CERT}
       restart: on-failure
       links:
         - db:db
@@ -85,7 +85,7 @@ services:
         KONG_ADMIN_GUI_URL: http://localhost:8002
         # ISC_IRIS_URL: "IAM:${IRIS_PASSWORD}@10.0.0.11:52773/api/iam/license"
         ISC_IRIS_URL: "IAM:${IRIS_PASSWORD}@iris:52773/api/iam/license"
-        ISC_CA_CERT: ${ISC_CA_CERT}
+        # ISC_CA_CERT: ${ISC_CA_CERT}
       links:
         - db:db
       ports:
