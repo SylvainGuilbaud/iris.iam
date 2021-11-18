@@ -19,6 +19,7 @@ XData install [ XMLNamespace = INSTALLER ]
       <Database Name="${DBDATA}" Dir="${APPPATH}${DBDATA}" Create="yes" Resource="${RESOURCEDATA}"/>
     </Configuration>
     <Import File="/src/cls/${NAMESPACE}" Recurse="1"/>
+    <Import File="/src/cls/Sample" Recurse="1"/>
 
   </Namespace>
 
