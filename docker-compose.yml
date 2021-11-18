@@ -33,8 +33,8 @@ services:
         - databases:/databases
         - IRIS:/IRIS
         ports:
-          - 1972:1972
-          - 52773:52773
+          - 1972
+          - 52773
         command:
           --key /keys/iris.key
           -a /src/shell/init.sh
