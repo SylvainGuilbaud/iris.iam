@@ -1,7 +1,7 @@
 ARG IMAGE=containers.intersystems.com/intersystems/irishealth:2021.1.0.215.0
 # ARG IMAGE=containers.intersystems.com/intersystems/iris:2021.1.0.215.0
 FROM $IMAGE 
-COPY keys/iris.key /usr/irissys/mgr/iris.key
+# COPY keys/iris.key /usr/irissys/mgr/iris.key
 COPY ./src/scripts/iam.script /tmp/iam.script
 
 RUN iris start IRIS \

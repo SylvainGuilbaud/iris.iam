@@ -1,4 +1,4 @@
-version: '3.7'
+version: '3.8'
 
 # networks:
 #   iris-net:
@@ -34,7 +34,7 @@ services:
         - IRIS:/IRIS
         ports:
           - 1972
-          - 52773
+          - 49574:52773
         command:
           --key /keys/iris.key
           -a /src/shell/init.sh
@@ -45,6 +45,7 @@ services:
       #     iris-net:
       #       ipv4_address: 10.0.0.12
       depends_on:
+        - iris
         - db
       environment:
         KONG_DATABASE: postgres
@@ -65,6 +66,7 @@ services:
       #     iris-net:
       #       ipv4_address: 10.0.0.13
       depends_on:
+        - iris
         - db
       environment:
         KONG_ADMIN_ACCESS_LOG: /dev/stdout
@@ -116,6 +118,8 @@ services:
       restart: on-failure
     db:
       image: postgres:9.6
+      depends_on:
+        - iris
       # networks:
       #     iris-net:
       #       ipv4_address: 10.0.0.14

@@ -8,6 +8,8 @@ zn "app"
 write ##class(Ens.Director).SetAutoStart("APP.production")
 write ##class(Ens.Director).StartProduction("APP.production")
 write ##class(Ens.Config.Credentials).SetCredential("IRIS","_system","SYS",1)
+do \$SYSTEM.OBJ.LoadDir("/src/cls/Sample", "ck",,1) 
+do ##class(Sample.Person).AddTestData()
 halt
 END
 exit=$?
