@@ -1,0 +1,79 @@
+/* ["http: //10.0.0.1:52773/api/mgmnt/"] */ 
+
+
+
+
+[
+    {
+        "name": "/api/atelier",
+        "dispatchClass": "%Api.Atelier",
+        "namespace": "%SYS",
+        "resource": "%Development",
+        "swaggerSpec": "/api/mgmnt/v1/%25SYS/spec/api/atelier",
+        "enabled": true
+    },
+    {
+        "name": "/api/deepsee",
+        "dispatchClass": "%Api.DeepSee",
+        "namespace": "%SYS",
+        "resource": "",
+        "swaggerSpec": "/api/mgmnt/v1/%25SYS/spec/api/deepsee",
+        "enabled": true
+    },
+    {
+        "name": "/api/docdb",
+        "dispatchClass": "%Api.DocDB",
+        "namespace": "%SYS",
+        "resource": "",
+        "swaggerSpec": "/api/mgmnt/v1/%25SYS/spec/api/docdb",
+        "enabled": true
+    },
+    {
+        "name": "/api/iam",
+        "dispatchClass": "%Api.IAM.v1.disp",
+        "namespace": "%SYS",
+        "resource": "%IAM",
+        "swaggerSpec": "/api/mgmnt/v1/%25SYS/spec/api/iam",
+        "enabled": true
+    },
+    {
+        "name": "/api/iknow",
+        "dispatchClass": "%Api.iKnow",
+        "namespace": "%SYS",
+        "resource": "",
+        "swaggerSpec": "/api/mgmnt/v1/%25SYS/spec/api/iknow",
+        "enabled": true
+    },
+    {
+        "name": "/api/mgmnt",
+        "dispatchClass": "%Api.Mgmnt.v2.disp",
+        "namespace": "%SYS",
+        "resource": "",
+        "swaggerSpec": "/api/mgmnt/v1/%25SYS/spec/api/mgmnt",
+        "enabled": true
+    },
+    {
+        "name": "/api/monitor",
+        "dispatchClass": "%Api.Monitor",
+        "namespace": "%SYS",
+        "resource": "",
+        "swaggerSpec": "/api/mgmnt/v1/%25SYS/spec/api/monitor",
+        "enabled": true
+    },
+    {
+        "name": "/api/uima",
+        "dispatchClass": "%Api.UIMA",
+        "namespace": "%SYS",
+        "resource": "",
+        "swaggerSpec": "/api/mgmnt/v1/%25SYS/spec/api/uima",
+        "enabled": true
+    },
+    {
+        "name": "/rest/coffeemakerapp",
+        "dispatchClass": "Demo.CoffeeMakerRESTServer",
+        "namespace": "RESTSAMPLE",
+        "resource": "",
+        "swaggerSpec": "/api/mgmnt/v1/RESTSAMPLE/spec/rest/coffeemakerapp",
+        "enabled": true
+    }
+]

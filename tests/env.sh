@@ -1,6 +1,5 @@
-# export HOSTNAME=192.168.1.100
-export HOSTNAME=172.20.10.3
-export IRIS_WEBPORT=49574
+export HOSTNAME=172.23.0.1
+export IRIS_WEBPORT=443
 export ISC_IAM_IMAGE=intersystems/iam:2.3.3.2-1
-export IRIS_PASSWORD=SYS
+export IRIS_PASSWORD=gkfjdhgdshgfk
 export ISC_IRIS_URL=IAM:${IRIS_PASSWORD}@${HOSTNAME}:${IRIS_WEBPORT}/api/iam/license

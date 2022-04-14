@@ -1,0 +1,138 @@
+http: //10.0.0.1:52773/api/mgmnt/v1/RESTSAMPLE/spec/rest/coffeemakerapp
+{
+    "info": {
+        "title": "",
+        "description": "",
+        "version": "",
+        "x-ISC_Namespace": "RESTSAMPLE"
+    },
+    "basePath": "/rest/coffeemakerapp",
+    "paths": {
+        "/test": {
+            "get": {
+                "operationId": "test",
+                "description": " Tester method ",
+                "x-ISC_ServiceMethod": "test",
+                "responses": {
+                    "default": {
+                        "description": "(Unexpected Error)"
+                    },
+                    "200": {
+                        "description": "(Expected Result)"
+                    }
+                }
+            }
+        },
+        "/coffeemakers": {
+            "get": {
+                "operationId": "GetAll",
+                "x-ISC_ServiceMethod": "GetAll",
+                "responses": {
+                    "default": {
+                        "description": "(Unexpected Error)"
+                    },
+                    "200": {
+                        "description": "(Expected Result)"
+                    }
+                }
+            }
+        },
+        "/coffeemaker/{id}": {
+            "get": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "operationId": "GetCoffeeMakerInfo",
+                "x-ISC_ServiceMethod": "GetCoffeeMakerInfo",
+                "responses": {
+                    "default": {
+                        "description": "(Unexpected Error)"
+                    },
+                    "200": {
+                        "description": "(Expected Result)"
+                    }
+                }
+            },
+            "put": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "payloadBody",
+                        "in": "body",
+                        "description": "Request body contents",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "operationId": "EditMaker",
+                "x-ISC_ServiceMethod": "EditMaker",
+                "responses": {
+                    "default": {
+                        "description": "(Unexpected Error)"
+                    },
+                    "200": {
+                        "description": "(Expected Result)"
+                    }
+                }
+            },
+            "delete": {
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "operationId": "RemoveCoffeemaker",
+                "x-ISC_ServiceMethod": "RemoveCoffeemaker",
+                "responses": {
+                    "default": {
+                        "description": "(Unexpected Error)"
+                    },
+                    "200": {
+                        "description": "(Expected Result)"
+                    }
+                }
+            }
+        },
+        "/newcoffeemaker": {
+            "post": {
+                "parameters": [
+                    {
+                        "name": "payloadBody",
+                        "in": "body",
+                        "description": "Request body contents",
+                        "required": false,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "operationId": "NewMaker",
+                "x-ISC_ServiceMethod": "NewMaker",
+                "responses": {
+                    "default": {
+                        "description": "(Unexpected Error)"
+                    },
+                    "200": {
+                        "description": "(Expected Result)"
+                    }
+                }
+            }
+        }
+    },
+    "swagger": "2.0"
+}
